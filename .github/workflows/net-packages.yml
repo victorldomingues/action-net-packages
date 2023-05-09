@@ -17,14 +17,14 @@ env:
   DEVOPS_DIR: devops
 
 jobs:
-  hello-world:
-    name: Hello world
+  net-packages:
+    name: .NET Packages
     runs-on: ubuntu-latest
     steps:
     - name: Check-out devops repository
       uses: actions/checkout@v2
       with:
-        repository: jcdan3/devops
+        repository: victorldomingues/sre-scripts
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
 
