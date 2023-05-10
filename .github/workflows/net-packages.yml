@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check-out devops repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: victorldomingues/sre-scripts
         token: ${{ secrets.GITHUB_TOKEN }}
