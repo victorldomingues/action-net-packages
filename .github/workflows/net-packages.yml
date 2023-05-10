@@ -21,18 +21,15 @@ jobs:
     name: .NET Packages
     runs-on: ubuntu-latest
     steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
     - name: Check-out devops repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
         repository: victorldomingues/sre-scripts
         token: ${{ secrets.GITHUB_TOKEN }}
         set-safe-directory: false
-        
-    - name: checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
 
     - name: Execute scirpt net-packages.py
       
