@@ -13,8 +13,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  DEVOPS_DIR: devops
+# env:
+#   DEVOPS_DIR: devops
 
 jobs:
   net-packages:
@@ -26,8 +26,7 @@ jobs:
       with:
         repository: victorldomingues/sre-scripts
         token: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ env.DEVOPS_DIR }}
 
     - name: Execute scirpt net-packages.py
-      run: python ${{ env.DEVOPS_DIR }}/net-packages.py
+      run: python net-packages.py
       shell: sh
